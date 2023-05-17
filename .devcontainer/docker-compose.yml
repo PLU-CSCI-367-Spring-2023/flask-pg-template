@@ -34,7 +34,6 @@ services:
     image: postgres:latest
     restart: unless-stopped
     volumes:
-      - ./.postgres_data:/var/lib/postgresql/data
       - ./pg_init:/docker-entrypoint-initdb.d
       - ./pg_init/seed_data:/var/data/seed_data
     environment:
